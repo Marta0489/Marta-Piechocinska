@@ -125,8 +125,20 @@
         </section>
 </main>
 </div>
+        <audio id="clickSound" src="click.mp3" preload="auto"></audio>
 
+<script>
+  const downloadBtn = document.querySelector('.cv-download-link');
+  const clickSound = document.getElementById('clickSound');
+
+  downloadBtn.addEventListener('click', () => {
+    clickSound.play();
+  });
+</script>
+
+    </body>    
 </html>
+
 
 
 
