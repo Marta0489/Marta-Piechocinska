@@ -135,9 +135,24 @@
     clickSound.play();
   });
 </script>
+<audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
+<script>
+  const downloadBtn = document.querySelector('.cv-download-link');
+  const clickSound = document.getElementById('clickSound');
+
+  // Ustawienie głośności (0.0 = cicho, 1.0 = maks)
+  clickSound.volume = 0.35; // elegancki, delikatny stuk
+
+  downloadBtn.addEventListener('click', () => {
+    clickSound.currentTime = 0; // reset, żeby dźwięk zawsze się odtwarzał
+    clickSound.play();
+  });
+</script>
 
     </body>    
 </html>
+
 
 
 
